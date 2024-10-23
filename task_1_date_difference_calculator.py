@@ -1,6 +1,6 @@
 from datetime import datetime
 
-def get_days_from_today(date=""):
+def get_days_from_today(date):
     try:
         user_date = datetime.strptime(date, '%Y-%m-%d')
         current_date = datetime.today()
@@ -9,7 +9,7 @@ def get_days_from_today(date=""):
         print (f"The difference between the entered date and current date is {days_difference} days")
 
     except ValueError:
-        print (f'Oops!  That was no valid format. Please enter the date in the YYYY-MM-DD format!') 
+        print (f'Oops! That was no valid format. Please enter the date in the YYYY-MM-DD format!') 
 
     finally:
         print( '-' * 90) 
